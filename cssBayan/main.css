@@ -79,9 +79,7 @@ h2.title {
     width: 100%;
     margin: 0;
 
-    border-bottom: 1px solid #000;
-
-    /*background: var(--color-bg);*/
+    border-bottom: 1px dotted #000;
 
     transition: background 0.5s ease;
 }
@@ -98,8 +96,6 @@ h2.title {
 }
 
 .accordion__title {
-    /*--color-bg: #b72f2a;*/
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -107,8 +103,6 @@ h2.title {
 
     width: 100%;
     padding: 1vw 3vw;
-
-    /*background: var(--color-bg);*/
 
     transition: background 0.5s ease, color 0.5s ease;
 }
@@ -136,27 +130,18 @@ h2.title {
 }
 
 .accordion__content{
-    /*--color-bg: #b72a96;*/
-
     width: 100%;
     padding: 0;
-
-    /*background: var(--color-bg);*/
 }
 
 .accordion__img {
-    /*--color-bg: #2a86b7;*/
-
     display: block;
 
-    width: 200px;
     height: 0;
     margin: 0 auto;
 
-    transition: height 0.5s ease;
+    transition: height 0.5s ease, opacity 0.5s ease;
     transform-origin: top;
-
-    /*background: var(--color-bg);*/
 }
 
 .accordion__input:checked~.accordion__label .accordion__title{
@@ -190,19 +175,17 @@ h2.title {
     height: 200px;
 }
 
-.accordion__input:active ~ .accordion__label .accordion__title{
-    /*--color-bg: #95f604;*/
-
-    /*background: var(--color-bg);*/
+.accordion__input:active ~ .accordion__label{
+    filter: grayscale(0.9);
 }
 
 .accordion__input:active ~ .accordion__label .accordion__img{
-    filter: blur(0.5) opacity(0.3);
+    opacity: 0.2;
 }
 
 @media (min-width: 820px) {
     .section{
-        max-width: 1200px;
+        max-width: 600px;
     }
 
     .accordion:hover .accordion__ico{
@@ -223,28 +206,10 @@ h2.title {
         -webkit-mask-image: url('images/plus.svg');
         mask-image:url('images/plus.svg');
     }
-
-    .accordion__item:hover {
-        /*--color-bg: #49b72a;*/
-
-        /*background: var(--color-bg);*/
-    }
-
-    .accordion__title:hover {
-        /*--color-bg: #2c33c0;*/
-
-        /*background: var(--color-bg);*/
-    }
-
-    .accordion__input:checked~.accordion__label .accordion__title:hover{
-        /*--color-bg: #4f1c2a;*/
-
-        /*background: var(--color-bg);*/
-    }
 }
 
 @media (min-width: 1920px) {
     .section{
-        max-width: 1400px;
+        max-width: 800px;
     }
 }
