@@ -166,7 +166,7 @@ h2.title {
 }
 
 .accordion__input:checked ~ .accordion__label .accordion__img {
-    height: 200px;
+    height: 40vh;
 }
 
 .accordion__item:hover  .accordion__content {
@@ -174,7 +174,7 @@ h2.title {
 }
 
 .accordion__item:hover .accordion__img{
-    height: 200px;
+    height: 40vh;
 }
 
 .accordion__input:active ~ .accordion__label{
@@ -184,7 +184,7 @@ h2.title {
 
 @media (min-width: 820px) {
     .section{
-        max-width: 800px;
+        max-width: 60vw;
     }
 
     .accordion:hover .accordion__ico{
@@ -217,6 +217,6 @@ h2.title {
 
 @media (min-width: 1920px) {
     .section{
-        max-width: 1000px;
+        max-width: 40vw;
     }
 }
