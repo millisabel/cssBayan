@@ -3,6 +3,7 @@
 :root{
     --color-font: #000;
     --color-bg: #95f604;
+    --font-size: 1.2em;
 }
 
 *{
@@ -22,7 +23,7 @@ body {
     color: var(--color-font);
 
     font-family: 'Poppins', sans-serif;
-    font-size: calc(14px + 8 * ((100vw - 320px) / 680));
+    font-size: var(--font-size);
 
     overflow: scroll;
 }
@@ -55,14 +56,24 @@ a {
 }
 
 h1.title {
+    --font-size: 1.2em;
+
     text-transform: capitalize;
     font-size: calc(16px + 10 * ((100vw - 320px) / 680));
 }
 
 h2.title {
+    --font-size: 1.1em;
+
     margin-bottom: 2vw;
     text-align: center;
     font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+}
+
+.title--mark{
+    --color-font: #d5031c;
+
+    color: var(--color-font);
 }
 
 .accordion {
@@ -182,17 +193,10 @@ h2.title {
     opacity: 0.2;
 }
 
-@media (min-width: 820px) {
-    .section{
-        max-width: 60vw;
-    }
+@media screen{
 
     .accordion:hover .accordion__ico{
         opacity: 1;
-    }
-
-    .accordion__input:not(:checked)~.accordion__label{
-        opacity: 0.6;
     }
 
     .accordion:hover .accordion__input:not(:checked)~.accordion__label{
@@ -215,7 +219,41 @@ h2.title {
     }
 }
 
+@media (min-width: 820px) {
+    :root{
+        --font-size: 1.3em;
+    }
+
+    .section{
+        max-width: 60vw;
+    }
+
+    h1.title {
+        --font-size: 1.3em;
+    }
+
+    h2.title {
+        --font-size: 1.2em;
+    }
+
+    .accordion__input:not(:checked)~.accordion__label{
+        opacity: 0.6;
+    }
+}
+
 @media (min-width: 1920px) {
+    :root{
+        --font-size: 1.4em;
+    }
+
+
+    h1.title {
+        --font-size: 1.4em;
+    }
+
+    h2.title {
+        --font-size: 1.3em;
+    }
     .section{
         max-width: 40vw;
     }
