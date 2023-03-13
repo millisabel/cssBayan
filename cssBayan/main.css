@@ -59,7 +59,7 @@ h1.title {
     --font-size: 1.2em;
 
     text-transform: capitalize;
-    font-size: calc(16px + 10 * ((100vw - 320px) / 680));
+    font-size: var(--font-size);
 }
 
 h2.title {
@@ -67,7 +67,7 @@ h2.title {
 
     margin-bottom: 2vw;
     text-align: center;
-    font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+    font-size: var(--font-size);
 }
 
 .title--mark{
@@ -90,7 +90,7 @@ h2.title {
     width: 100%;
     margin: 0;
 
-    border-bottom: 1px dotted #000;
+    border-bottom: 0.1rem dotted #000;
     background: #fff;
 }
 
@@ -180,20 +180,15 @@ h2.title {
     height: 40vh;
 }
 
-.accordion__item:hover  .accordion__content {
-    padding: 2vw;
-}
-
-.accordion__item:hover .accordion__img{
-    height: 40vh;
-}
-
-.accordion__input:active ~ .accordion__label{
-    filter: grayscale(0.9);
-    opacity: 0.2;
-}
-
 @media screen{
+
+    .accordion__item:hover  .accordion__content {
+        padding: 2vw;
+    }
+
+    .accordion__item:hover .accordion__img{
+        height: 40vh;
+    }
 
     .accordion:hover .accordion__ico{
         opacity: 1;
@@ -216,6 +211,11 @@ h2.title {
 
         -webkit-mask-image: url('images/plus.svg');
         mask-image:url('images/plus.svg');
+    }
+
+    .accordion__input:active ~ .accordion__label{
+        filter: grayscale(0.9);
+        opacity: 0.2;
     }
 }
 
