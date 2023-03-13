@@ -180,6 +180,15 @@ h2.title {
     height: 40vh;
 }
 
+.link{
+    display: block;
+
+    padding: 5vw 0;
+
+    font-weight: bold;
+    text-align: center;
+}
+
 @media screen{
 }
 
@@ -238,6 +247,12 @@ h2.title {
     .accordion__input:active ~ .accordion__label{
         filter: grayscale(0.9);
         opacity: 0.2;
+    }
+
+    .link:hover{
+        --color-font: #d5031c;
+
+        color: var(--color-font);
     }
 }
 
