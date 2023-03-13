@@ -181,6 +181,28 @@ h2.title {
 }
 
 @media screen{
+}
+
+@media (min-width: 820px) {
+    :root{
+        --font-size: 1.3em;
+    }
+
+    .section{
+        max-width: 60vw;
+    }
+
+    h1.title {
+        --font-size: 1.3em;
+    }
+
+    h2.title {
+        --font-size: 1.2em;
+    }
+
+    .accordion__input:not(:checked)~.accordion__label{
+        opacity: 0.6;
+    }
 
     .accordion__item:hover  .accordion__content {
         padding: 2vw;
@@ -216,28 +238,6 @@ h2.title {
     .accordion__input:active ~ .accordion__label{
         filter: grayscale(0.9);
         opacity: 0.2;
-    }
-}
-
-@media (min-width: 820px) {
-    :root{
-        --font-size: 1.3em;
-    }
-
-    .section{
-        max-width: 60vw;
-    }
-
-    h1.title {
-        --font-size: 1.3em;
-    }
-
-    h2.title {
-        --font-size: 1.2em;
-    }
-
-    .accordion__input:not(:checked)~.accordion__label{
-        opacity: 0.6;
     }
 }
 
