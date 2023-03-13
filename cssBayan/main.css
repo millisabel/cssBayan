@@ -189,29 +189,7 @@ h2.title {
     text-align: center;
 }
 
-@media screen{
-}
-
-@media (min-width: 820px) {
-    :root{
-        --font-size: 1.3em;
-    }
-
-    .section{
-        max-width: 60vw;
-    }
-
-    h1.title {
-        --font-size: 1.3em;
-    }
-
-    h2.title {
-        --font-size: 1.2em;
-    }
-
-    .accordion__input:not(:checked)~.accordion__label{
-        opacity: 0.6;
-    }
+@media (hover: hover){
 
     .accordion__item:hover  .accordion__content {
         padding: 2vw;
@@ -253,6 +231,29 @@ h2.title {
         --color-font: #d5031c;
 
         color: var(--color-font);
+    }
+
+}
+
+@media (min-width: 820px) {
+    :root{
+        --font-size: 1.3em;
+    }
+
+    .section{
+        max-width: 60vw;
+    }
+
+    h1.title {
+        --font-size: 1.3em;
+    }
+
+    h2.title {
+        --font-size: 1.2em;
+    }
+
+    .accordion__input:not(:checked)~.accordion__label{
+        opacity: 0.6;
     }
 }
 
